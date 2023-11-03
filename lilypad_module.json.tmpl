@@ -12,10 +12,14 @@
       },
       "Docker": {
         "Entrypoint": [
-          "/usr/games/cowsay",
-          {{if .Message}}{{.Message}}{{else}}"Pass me an input called Message, like lilypad run cowsay:v0.0.2 -i Message=moo"{{end}}
+          "python",
+          "/app/test.py",
+          "--x",
+          {{.x}},
+          "--y",
+          {{.y}}
         ],
-        "Image": "grycap/cowsay@sha256:fad516b39e3a587f33ce3dbbb1e646073ef35e0b696bcf9afb1a3e399ce2ab0b"
+        "Image": "docker.io/marshath/lilypad-test:py_v0.1"
       },
       "Engine": "Docker",
       "Network": {
