@@ -17,10 +17,10 @@
             "Docker": {
                 "Entrypoint": [
                     "python3",
-                    /app/main.py,
-                    --prompt,
+                    "/app/main.py",
+                    "--prompt",
                     {{.Prompt}},
-                    --steps,
+                    "--steps",
                     {{.Steps}},
                 ],
                 "Image": "docker.io/marshath/sdxl-finetune:v0.0.1"
