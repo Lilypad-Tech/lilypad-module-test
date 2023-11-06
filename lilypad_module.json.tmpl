@@ -19,9 +19,9 @@
                     "python3",
                     "/app/train.py",
                     "--prompt",
-                    "a photo of a sks dog",
+                    {{.Prompt}},
                     "--steps",
-                    "300"
+                    {{.Steps}},
                 ],
                 "Image": "docker.io/marshath/sdxl-finetune:v0.0.1"
             },
@@ -45,7 +45,7 @@
             },
             "inputs": [
                 {
-                    "CID": "QmdZZgDnArmFw5nEbw9VssnURFz58TDCkMKEVEDcW5dD7F",
+                    "CID": {{.ImagesCID}},
                     "Name": "training_input",
                     "StorageSource": "IPFS",
                     "path": "/inputs"
